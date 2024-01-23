@@ -1,0 +1,5 @@
+What to test?
+1: Test Component renders
+2: Component renders with props
+3: Component renders in different states
+4: Component react to events
