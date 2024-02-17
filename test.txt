@@ -3,3 +3,46 @@ What to test?
 2: Component renders with props
 3: Component renders in different states
 4: Component react to events
+
+
+
+priority to use Queries
+1:getByRole
+2:getByLabelText
+3:getByplaceholderTExt
+4:getByText
+
+
+
+Queries:
+1:getBy: for elements present in HTML
+2:queryBy : for asserting elements which are not present in DOM
+3: findBy : for elements which are dynamic 
+
+
+Debugging :
+
+1: screen.debug()
+2:logRoles() 
+
+
+user-events 
+use user-events library 
+APIs 
+convenience APIs 
+1:click()
+2:dblClick()
+3:tripleClick()
+4:hover()
+5:unhover()
+
+pointer APIs
+1:pointer({keys:'[MouseLeft]'})
+
+
+
+
+
+
+
+

@@ -6,8 +6,13 @@ describe("Page", () => {
   it("renders a heading", () => {
     render(<Page />);
 
-    const heading =  screen.getByText("Home");
+    const heading = screen.getByText("Home");
+
+    // with substring
+    const paragraph = screen.getByText(/text/i);
 
     expect(heading).toBeInTheDocument();
+
+    expect(paragraph).toBeInTheDocument();
   });
 });
