@@ -40,6 +40,12 @@ pointer APIs
 1:pointer({keys:'[MouseLeft]'})
 
 
+mock Function 
+jest.fn() useful when we want to imitate a Function without the need to inititate that function itself
+
+
+https mock 
+
 
 
 
