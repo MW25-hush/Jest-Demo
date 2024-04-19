@@ -1,11 +1,48 @@
-export default  function Home() {
-  return (
-    <div>
-      <h1>Home</h1>
-      <section >
-        <p>Text String Test</p>
-      </section>
+"use client";
+import { context } from "@/utils/context";
+import useCustom from "@/utils/useCusotm";
+import { useContext, useReducer } from "react";
 
-    </div>
+interface typeState {
+  age: number;
+}
+
+const initialValue: typeState = {
+  age: 42,
+};
+
+export default function Home() {
+  const level = useContext(context);
+  const re = useCustom();
+  // Define the action types
+  type Action =
+    | { type: "increment"; payload: number }
+    | { type: "decrement"; payload: number };
+
+  // Define the reducer function
+  const reducer = (state: typeState, action: Action): typeState => {
+    switch (action.type) {
+      case "increment":
+        return { ...state, age: state.age + action.payload };
+      case "decrement":
+        return { ...state, age: state.age - action.payload };
+      default:
+        return state;
+    }
+  };
+
+  const [state, dispatch] = useReducer(reducer, initialValue);
+
+  return (
+    <context.Provider value={level}>
+      <div>
+        <h1>Home</h1>
+        <h1>{level}</h1>
+        <h1>{re}</h1>
+        <section>
+          <p>Text String Test</p>
+        </section>
+      </div>
+    </context.Provider>
   );
 }
