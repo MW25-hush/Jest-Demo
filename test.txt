@@ -5,7 +5,6 @@ What to test?
 4: Component react to events
 
 
-
 priority to use Queries
 1:getByRole
 2:getByLabelText
