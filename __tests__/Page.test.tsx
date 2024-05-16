@@ -40,9 +40,9 @@ describe("Photo Gallery", () => {
 describe("checking state", () => {
   it("should show the text which is less ", () => {
     render(<ImageGallery />);
-
-    const text = screen.getByText(/short text/i);
-
-    expect(text).toBeInTheDocument();
+    const text = screen.getAllByText(/short text/i);
+    text.forEach((item) => {
+      expect(item).toBeInTheDocument();
+    });
   });
 });

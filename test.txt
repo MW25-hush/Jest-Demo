@@ -43,7 +43,14 @@ mock Function
 jest.fn() useful when we want to imitate a Function without the need to inititate that function itself
 
 
-https mock 
+advanced terms 
+
+1- mocking apis 
+2- testing forms
+3- testing state managements
+4- testing authentication 
+5- tesing routing 
+
 
 
 

@@ -1,7 +1,7 @@
 "use client";
 import { context } from "@/utils/context";
 import useCustom from "@/utils/useCusotm";
-import { useContext, useReducer } from "react";
+import { useContext, useReducer, useState } from "react";
 
 interface typeState {
   age: number;
@@ -18,6 +18,7 @@ export default function Home({
   name?: string;
   password?: string;
 }) {
+  const [visible, setVisible] = useState(false);
   // const level = useContext(context);
   // const re = useCustom();
   // // Define the action types
@@ -50,6 +51,11 @@ export default function Home({
       <section>
         <p>Text String Test</p>
       </section>
+
+      <div>
+        <button onClick={() => setVisible(true)}>Show Heading</button>
+        {visible && <h1>This is a visible heading</h1>}
+      </div>
     </div>
     // </context.Provider>
   );
