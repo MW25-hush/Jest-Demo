@@ -11,7 +11,13 @@ const initialValue: typeState = {
   age: 42,
 };
 
-export default function Home() {
+export default function Home({
+  name,
+  password,
+}: {
+  name?: string;
+  password?: string;
+}) {
   // const level = useContext(context);
   // const re = useCustom();
   // // Define the action types
@@ -37,6 +43,8 @@ export default function Home() {
     // <context.Provider value={level}>
     <div>
       <h1>Home</h1>
+      <h1>{name}</h1>
+      <h1>{password}</h1>
       {/* <h1>{level}</h1> */}
       {/* <h1>{re}</h1> */}
       <section>
