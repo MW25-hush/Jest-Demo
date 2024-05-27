@@ -1,23 +1,31 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { exit } from "process";
 
-const variant = {
-  animate: {
-    x: [0, 100, 0],
-    y: [0, 100, 0],
-  },
-};
-export default function Home() {
+const LayoutExample = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="container">
       <motion.div
-        variants={variant}
-        initial="initialState"
-        animate="animate"
-        className="h-20 w-20 bg-red-400"
-      ></motion.div>
+        layout
+        className="box"
+        onClick={() => setIsExpanded(!isExpanded)}
+        style={{
+          width: isExpanded ? 300 : 100,
+          height: isExpanded ? 300 : 100,
+          backgroundColor: "cyan",
+          borderRadius: 10,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+        }}
+      >
+        Click Me
+      </motion.div>
     </div>
   );
-}
+};
+
+export default LayoutExample;
